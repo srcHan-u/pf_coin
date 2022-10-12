@@ -1,0 +1,21 @@
+@keyframes slow-hidden {
+   0%{
+      opacity: 1;
+      display: block;
+      visibility: visible;
+   }
+   25%{
+      opacity: 0.75;
+   }
+   50%{
+      opacity: 0.5;
+   }
+   75%{
+      opacity: 0.25;
+   }
+   100%{
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+   }
+}

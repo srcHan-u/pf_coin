@@ -4,6 +4,12 @@
 .button {
 	display: inline-flex;
 	padding: 0px 0px;
+   justify-content: center;
+   align-items: center;
+   border-radius: em(18,14);
+   font-weight: 700;
+   font-size: rem(14);
+   line-height: math.div(22,14);
 	@media (any-hover: hover) {
 		&:hover {
 		}

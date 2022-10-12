@@ -1,16 +1,155 @@
 //====================================================================================================
 
+.header {
+   min-height: rem(95);
+   display: flex;
+   align-items: flex-end;
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      column-gap: rem(20);
+   }
+
+   &__logo {
+      flex: 0 1 rem(191);
+   }
+
+   &__menu {
+      flex: 0 1 percent(764, 1340);
+   }
+
+   &__button {
+      flex: 0 0 rem(148);
+   }
+}
+.logo {
+   min-width: rem(150);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: rem(192);
+   width: 100%;
+   > img{
+      width: 100%;
+   }
+}
+
+.menu{
+   &__icon{}
+   &__navigation{
+   }
+}
+.navigation {
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: rem(10);
+      row-gap: rem(0);
+      flex-wrap: wrap;
+      @media (max-width:$mobile){
+          flex-direction: column; 
+      }
+   }
+
+   &__item {
+   }
+   
+   &__link {
+      line-height: math.div(22,16);
+      display: inline-block;
+      padding: rem(10) 0 0 0;
+      position: relative;
+      &::before{
+         content:'';
+         transition: width 0.5s ease;
+         display: block;
+         width: 0;
+         bottom: calc(100% + 15px);
+         left: 0;
+         position: absolute;
+         height: 2px;
+         background-color: #8AA931;
+      }
+      &[data-current="true"]{
+         font-weight: 700;
+         &::before{
+            content:'';
+            display: block;
+            width: 100%;
+            bottom: calc(100% + 15px);
+            left: 0;
+            position: absolute;
+            height: 2px;
+            background-color: #8AA931;
+         }
+         @media (max-width:$mobile){
+            &::before{
+               content:'';
+               display: none;
+               width: 0;
+               bottom: 0;
+               left: 0;
+               position: static;
+               height: 0;
+               background-color: initial;
+            }
+         }
+      }
+      @media (max-width:$mobile){
+          padding: 0;
+          font-size: rem(32); 
+          row-gap: rem(15);
+      }
+      @media (any-hover: hover){
+         &:hover{
+            &::before{
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+.button {
+   padding: rem(7) rem(32);
+   background: $LinearGreen-1;
+   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+
 //====================================================================================================
 
 //Burger
-/*
+.burger-menu{
+   position: fixed;
+   z-index: 99;
+   top: 0;
+   left: -100%;
+   width: 50%;
+   background-color: #fff;
+   height: 100%;
+   transition: left 0.5s ease;
+   overflow-y: auto;
+   .menu-open &{
+      left: 0;
+   }
+   &__body{
+      padding: rem(15) rem(20);
+   }
+}
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
+      margin: 0px 0px 0px auto;
 		display: block;
+      justify-content: center;
+      align-items: center;
 		position: relative;
 		width: rem(30);
-		height: rem(18);
+		height: rem(20);
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -22,7 +161,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $mainColor;
 		}
 		&::before {
 			top: 0;
@@ -51,4 +190,4 @@
 		}
 	}
 }
-*/
+
