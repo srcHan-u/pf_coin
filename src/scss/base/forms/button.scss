@@ -6,10 +6,12 @@
     padding: 0px 0px;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
-    font-size: rem(14);
-    line-height: math.div(22, 14);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: em(27, 20);
+    background: $LinearGreen-2;
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: math.div(22, 20);
     @media (any-hover: hover) {
         &:hover {
         }

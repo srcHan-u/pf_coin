@@ -30,6 +30,9 @@
         padding: rem(7) 0;
         background: $LinearGreen-1;
         border-radius: em(18, 14);
+        font-weight: 700;
+        font-size: rem(14);
+        line-height: math.div(22, 14);
     }
 }
 .logo {
@@ -107,6 +110,13 @@
                 }
             }
         }
+        &[data-be="false"] {
+            text-decoration: line-through;
+            opacity: 0.7;
+            &::before {
+                display: none;
+            }
+        }
         @media (max-width: $mobile) {
             padding: 0;
             font-size: rem(32);
@@ -120,8 +130,6 @@
             }
         }
     }
-}
-.button {
 }
 
 //====================================================================================================
