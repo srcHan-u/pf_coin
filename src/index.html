@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="page__main-screen main-screen">
+          <div class="main-screen__container">
+            <div class="main-screen__content">
+                
+              <h1 class="main-screen__title"><em class="selected-text selected-text_light">Cyber</em> <em class="selected-text">Protection</em> on Blockchain</h1>
+              <p class="main-screen__description">
+                Scale up easily. Go global. Take a look into the future of advertising.
+              </p>
+              <div class="main-screen__button-box">
+                <button type="button" class="main-screen__button button">
+                  BUY TOKENS
+                </button>
+                <a href="#" class="main-screen__link link-download">
+                    <img class="link-download__icon" src="@img/svg/icon_cercle-arrow.svg" alt="image">
+                    <span class="link-download__text">DOWNLOAD</span>
+                </a>
+              </div>
+            </div>
+            <div class="main-screen__image-box">
+              <img
+                class="main-screen__image"
+                data-src="@img/home/image_1.png"
+                alt="image"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>

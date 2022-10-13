@@ -16,4 +16,7 @@
 .selected-text {
     color: $mCGreenBold;
     font-style: normal;
+    &_light {
+        color: #cddf97;
+    }
 }
