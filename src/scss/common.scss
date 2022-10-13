@@ -1,14 +1,19 @@
 // Заголовки, общие БЄМ блоки и проче...
-.background-lock{
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 98;
-   width: 100%;
-   height: 100%;
-   background-color: rgba($color: #000000, $alpha: 0.4);
-   animation: slow-hidden 0.5s ease 0s 1 normal forwards;
-   .lock &{
-      animation: slow-hidden 0.5s ease 0s 1 reverse forwards;
-   }
+.background-lock {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    animation: slow-hidden 0.5s ease 0s 1 normal forwards;
+    .lock & {
+        animation: slow-hidden 0.5s ease 0s 1 reverse forwards;
+    }
+}
+
+.selected-text {
+    color: $mCGreenBold;
+    font-style: normal;
 }
