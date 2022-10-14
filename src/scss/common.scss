@@ -32,3 +32,37 @@
     background-color: red;
     z-index: 999;
 }
+
+.sub-title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 46, 32);
+    line-height: math.div(81, 46);
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: rem(112);
+        background-color: $mCGreen-2;
+        height: 4px;
+    }
+}
+
+.w-135 {
+    width: rem(135);
+}
+.w-151 {
+    width: rem(151);
+}
+.w-162 {
+    width: rem(162);
+}
+.w-147 {
+    width: rem(147);
+}
+.w-136 {
+    width: rem(136);
+}

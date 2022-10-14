@@ -122,6 +122,7 @@
 
 .page {
     &__offer {
+        @include adaptiveValue("padding-bottom", 160, 120);
     }
 }
 .offer {
@@ -278,5 +279,363 @@
         line-height: math.div(17, 14);
         color: rgba(76, 93, 118, 0.61);
         max-width: rem(120);
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__about {
+        @include adaptiveValue("padding-bottom", 152, 125);
+    }
+}
+.about {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image-box {
+        flex: 0 1 rem(650);
+        min-width: rem(290);
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__content {
+        flex: 0 1 rem(606);
+    }
+
+    &__sub-title {
+        &:not(:last-child) {
+            padding-bottom: em(22, 46);
+            margin-bottom: em(48, 46);
+        }
+    }
+
+    &__description {
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        &:not(:last-child) {
+            margin-bottom: em(31, 20);
+        }
+    }
+
+    &__sub-description {
+        line-height: math.div(31, 16);
+        color: rgba(76, 93, 118, 0.82);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 61, 30);
+        }
+    }
+
+    &__list {
+    }
+}
+
+.list-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(20);
+    &__item {
+        flex: 0 1 rem(230);
+        line-height: math.div(21, 16);
+        color: #4c5d76;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: rem(20);
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: rem(12);
+            height: rem(12);
+            background-color: $mCGreen-2;
+            border-radius: 50%;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__companies {
+        @include adaptiveValue("margin-bottom", 150, 120);
+        padding: rem(50) 0;
+        border-top: 1px solid rgba(174, 216, 176, 0.43);
+        border-bottom: 1px solid rgba(174, 216, 176, 0.43);
+    }
+}
+.companies {
+    &__container {
+    }
+
+    &__list {
+        padding: 0 percent(55, 1340);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: percent(124, 1340);
+        row-gap: rem(35);
+    }
+
+    &__item {
+        flex: 0 0 auto;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__game {
+        @include adaptiveValue("padding-bottom", 181, 130);
+    }
+}
+.game {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        flex: 0 1 rem(607);
+    }
+
+    &__sub-title {
+        line-height: math.div(56, 46);
+        &:not(:last-child) {
+            margin-bottom: 1em;
+            padding-bottom: em(22, 46);
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        &:not(:last-child) {
+            margin-bottom: em(30, 20);
+        }
+    }
+
+    &__sub-description {
+        line-height: math.div(31, 16);
+        color: rgba(76, 93, 118, 0.82);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 64, 40);
+        }
+    }
+
+    &__button-box {
+    }
+
+    &__button {
+        max-width: rem(275);
+        width: 100%;
+        min-width: rem(200);
+        padding: rem(17) 0;
+    }
+
+    &__image-box {
+        flex: 0 1 rem(652);
+        min-width: rem(290);
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__profin {
+        @include adaptiveValue("padding-bottom", 154, 130);
+    }
+}
+.profin {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image-box {
+        flex: 0 1 rem(658);
+        min-width: rem(290);
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__content {
+        flex: 0 1 rem(607);
+    }
+
+    &__sub-title {
+        line-height: math.div(56, 46);
+        &:not(:last-child) {
+            margin-bottom: 1em;
+            padding-bottom: em(38, 46);
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        &:not(:last-child) {
+            margin-bottom: em(30, 20);
+        }
+    }
+
+    &__sub-description {
+        line-height: math.div(31, 16);
+        color: rgba(76, 93, 118, 0.82);
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__benefits {
+        @include adaptiveValue("padding-bottom", 199, 140);
+    }
+}
+.benefits {
+    &__container {
+    }
+
+    &__sub-title {
+        max-width: rem(725);
+        line-height: math.div(56, 46);
+        &:not(:last-child) {
+            margin-bottom: em(80, 46);
+            padding-bottom: em(57, 46);
+        }
+    }
+
+    &__list {
+        // justify-content: space-between;
+        // align-items: flex-start;
+    }
+}
+
+.list-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // justify-content: center;
+    row-gap: rem(81);
+    &__item {
+        flex: 0 1 rem(408);
+        display: flex;
+        align-items: center;
+        gap: rem(26);
+    }
+
+    &__icon {
+        flex: 0 0 rem(96);
+        // min-width: rem(60);
+        align-self: flex-start;
+    }
+
+    &__inner {
+    }
+
+    &__name {
+        max-width: rem(286);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 22, 18);
+        line-height: math.div(21, 22);
+        &:not(:last-child) {
+            margin-bottom: em(17, 22);
+        }
+    }
+
+    &__description {
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: math.div(25, 18);
+        max-width: rem(236);
+    }
+}
+
+//========================================================================================================================================================
+
+.page {
+    &__team {
+        @include adaptiveValue("padding-bottom", 150, 120);
+    }
+}
+.team {
+    &__container {
+    }
+
+    &__sub-title {
+    }
+
+    &__list {
+    }
+}
+
+.list-team {
+    &__item {
+    }
+
+    &__person {
+    }
+}
+.card-person {
+    max-width: rem(222);
+    position: relative;
+    &__image-ibg {
+        max-width: rem(202);
+        margin: 0 auto;
+        padding-bottom: percent(202, 222);
+        border-radius: 50%;
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: rem(38);
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 24, 20);
+        line-height: math.div(23, 24);
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: em(23, 24);
+        }
+    }
+
+    &__description {
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: math.div(23, 18);
+        text-align: center;
+    }
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(51);
+        height: rem(51);
+        background-color: rgba($color: $mainColor, $alpha: 0.6);
+        border-radius: 50%;
     }
 }
