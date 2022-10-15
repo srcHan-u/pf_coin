@@ -913,3 +913,23 @@
         align-items: center;
     }
 }
+
+//========================================================================================================================================================
+
+.page {
+    &__advisory-team {
+        @include adaptiveValue("padding-bottom", 156, 120);
+    }
+}
+.advisory-team {
+    &__container {
+    }
+
+    &__sub-title {
+        line-height: math.div(56, 46);
+        &:not(:last-child) {
+            margin-bottom: em(62, 46);
+            padding-bottom: em(49, 46);
+        }
+    }
+}
