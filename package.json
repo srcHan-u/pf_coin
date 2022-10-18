@@ -45,6 +45,7 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"highcharts": "^10.2.1",
 		"html-webpack-plugin": "latest",
 		"inputmask": "latest",
 		"js-datepicker": "latest",

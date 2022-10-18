@@ -971,7 +971,8 @@
         width: rem(278);
         height: rem(276);
         border-radius: 50%;
-        background-color: green;
+        overflow: visible !important;
+        // background-color: green;
         // outline: 40px solid green;
     }
 
