@@ -998,6 +998,31 @@
             border-radius: 50%;
             border: 5px solid green;
         }
+        &_color_green {
+            &::before {
+                border-color: #8aa831;
+            }
+        }
+        &_color_green-light {
+            &::before {
+                border-color: #bde0bb;
+            }
+        }
+        &_color_gray {
+            &::before {
+                border-color: #818181;
+            }
+        }
+        &_color_yellow {
+            &::before {
+                border-color: #fbd606;
+            }
+        }
+        &_color_yellow-light {
+            &::before {
+                border-color: #fcf3b8;
+            }
+        }
     }
 }
 
