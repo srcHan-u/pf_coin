@@ -23,17 +23,27 @@ export function rangeInit() {
 			},
          step: 10000,
          tooltips: true,
-         // format: 0
 		});
       let tooltip = document.querySelector(".noUi-tooltip");
       let handle = document.querySelector(".noUi-handle");
       let attr;
-
+      let index;
+      let b;
       priceSlider.noUiSlider.on("update", () => {
-         attr = handle.getAttribute("aria-valuenow").substring(0, 2).split("").join().replace(",", ".");
-         tooltip.innerHTML = `${attr}$m`
-         // console.log(tooltip)
-         // console.log(1)
+         // attr = handle.getAttribute("aria-valuenow").substring(0, 2).split("").join().replace(",", ".");
+         attr = handle.getAttribute("aria-valuenow");
+         index = attr.indexOf('.');
+         b = attr.slice(0, index); 
+         console.log(b);
+         if (b.length === 5) {
+            tooltip.innerHTML = `0.0${b[0]}$m`
+         }else if(b.length === 6){
+            tooltip.innerHTML = `0.${b[0]}$m`
+            
+         }else{
+            tooltip.innerHTML = `${b.substring(0, 2).split('').join().replace(",", ".")}$m`
+
+         }
       })
       
 		/*
