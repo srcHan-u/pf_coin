@@ -8,18 +8,34 @@ import * as noUiSlider from 'nouislider';
 // import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
-	const priceSlider = document.querySelector('#range');
+
+	const priceSlider = document.querySelector('#range-slider');
+   
 	if (priceSlider) {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
+			start: 2000000, // [0,200000]
 			connect: [true, false],
 			range: {
 				'min': [0],
-				'max': [200000]
-			}
+				'max': [5000000]
+			},
+         step: 10000,
+         tooltips: true,
+         // format: 0
 		});
+      let tooltip = document.querySelector(".noUi-tooltip");
+      let handle = document.querySelector(".noUi-handle");
+      let attr;
+
+      priceSlider.noUiSlider.on("update", () => {
+         attr = handle.getAttribute("aria-valuenow").substring(0, 2).split("").join().replace(",", ".");
+         tooltip.innerHTML = `${attr}$m`
+         // console.log(tooltip)
+         // console.log(1)
+      })
+      
 		/*
 		const priceStart = document.getElementById('price-start');
 		const priceEnd = document.getElementById('price-end');
@@ -33,7 +49,7 @@ export function rangeInit() {
 				priceStartValue = priceStart.value;
 			}
 			if (priceEnd.value != '') {
-				priceEndValue = priceEnd.value;
+				priceEndValue = priceEnd.value;  
 			}
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 		}

@@ -183,7 +183,9 @@
     }
 
     &__action {
-        flex: 0 1 rem(493);
+      //   flex: 0 1 rem(493);
+        max-width: rem(493);
+        width: 100%;
         margin: 0 0 0 percent(132, 1340);
         padding-left: rem(36);
         min-height: rem(241);
@@ -194,8 +196,12 @@
     }
 }
 .offer-action {
+   flex-direction: column;
+   justify-content: space-between;
+   display: flex;
     &__timer {
     }
+    &__range{}
 }
 .offer-info {
     display: flex;
