@@ -508,12 +508,27 @@
     }
 
     &__button-box {
+       position: relative;
+       display: inline-block;
+      >.background-absolute-image-2{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: rem(295);
+         height: rem(155);
+         display: block;
+         content: "";
+         transform: translate(-50%, -50%);
+        }
     }
+    
 
     &__button {
         max-width: rem(275);
         width: 100%;
         min-width: rem(200);
+        position: relative;
+        z-index: 2;
         padding: rem(17) 0;
         @media (max-width: $mobileSmall) {
             max-width: none;
@@ -522,10 +537,11 @@
 
     &__image-box {
         flex: 0 1 rem(652);
-        min-width: rem(290);
+        min-width: rem(290);;
         @media (max-width: $mobile) {
             flex: auto;
         }
+        
     }
 
     &__image {

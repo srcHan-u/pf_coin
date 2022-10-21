@@ -30,11 +30,9 @@ export function rangeInit() {
       let index;
       let b;
       priceSlider.noUiSlider.on("update", () => {
-         // attr = handle.getAttribute("aria-valuenow").substring(0, 2).split("").join().replace(",", ".");
          attr = handle.getAttribute("aria-valuenow");
          index = attr.indexOf('.');
          b = attr.slice(0, index); 
-         console.log(b);
          if (b.length === 5) {
             tooltip.innerHTML = `0.0${b[0]}$m`
          }else if(b.length === 6){

@@ -9,4 +9,4 @@ Array.from(document.querySelectorAll('.navigation__link[data-be="false"]')).forE
     el.addEventListener("click", (e) => {
         e.preventDefault();
     })
-})
+})   
